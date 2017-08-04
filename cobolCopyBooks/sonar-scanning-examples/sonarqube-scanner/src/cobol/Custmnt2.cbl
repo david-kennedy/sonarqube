@@ -11,15 +11,15 @@
        01  SWITCHES.
       *
            05  VALID-DATA-SW                 PIC X(01) VALUE 'Y'.
-               88  VALD-DATA                          VALUE 'Y'.
+               88  VALID-DATA                          VALUE 'Y'.
       *
        01  FLAGS.
       *
            05  SEND-FLAG                     PIC X(01).
                88  SEND-ERASE                       VALUE '1'.
                88  SEND-ERASE-ALARM                 VALUE '2'.
-               88  SEND-DATONLY                    VALUE '3'.
-               88  SEND-DATAONY-ALARM              VALUE '4'.
+               88  SEND-DATAONLY                    VALUE '3'.
+               88  SEND-DATAONLY-ALARM              VALUE '4'.
       *
        01  WORK-FIELDS.
       *
@@ -31,7 +31,7 @@
                'Type information for new customer.  Then Press Enter.'.
            05  CHANGE-INSTRUCTION            PIC X(79) VALUE
                'Type changes.  Then press Enter.'.
-           05  DEETE-INSTRUCTION            PIC X(79) VALUE
+           05  DELETE-INSTRUCTION            PIC X(79) VALUE
                'Press Enter to delete this customer or press F12 to canc
       -        'el.'.
       *
@@ -43,7 +43,7 @@
                88  PROCESS-CHANGE-CUSTOMER          VALUE '3'.
                88  PROCESS-DELETE-CUSTOMER          VALUE '4'.
            05  CA-CUSTOMER-RECORD.
-               10  CA-CUSTOMER-NUMBER        PIC X(06).
+               10  CA-CUSTOMER-NUMBER        PIC X(08).
                10  FILLER                    PIC X(112).
       *
        COPY CUSTMAS.
