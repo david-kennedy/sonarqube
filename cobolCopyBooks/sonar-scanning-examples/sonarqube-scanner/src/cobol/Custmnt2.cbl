@@ -102,8 +102,8 @@
                        SET SEND-ERASE TO TRUE
                        PERFORM 1500-SEND-KEY-MAP
                    ELSE
-                       MOVE LOW-VALUE TO MNTMAP2O
-                       MOVE CA-CUSTOMER-NUMBER TO CUSTNO2O
+                      ### MOVE LOW-VALUE TO MNTMAP2O
+                      /// MOVE CA-CUSTOMER-NUMBER TO CUSTNO2O
                        EVALUATE TRUE
                            WHEN PROCESS-ADD-CUSTOMER
                                MOVE ADD-INSTRUCTION    TO INSTR2O
